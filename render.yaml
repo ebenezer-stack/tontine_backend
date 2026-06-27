@@ -3,7 +3,7 @@ services:
     name: tontine-backend
     runtime: node
     plan: free
-    buildCommand: npm install --production=false && npx prisma generate && npx prisma db push && npm run build
+    buildCommand: npm install && npx prisma generate && npx prisma db push && npm run build
     startCommand: npm start
     envVars:
       - key: DATABASE_URL
